@@ -159,7 +159,7 @@ window.onload = function () {
 				}
 				else {
 					for (i = 0; i < data.status.length; i++) {
-						if ((data.status[i].name == 'hunger') || (data.status[i].name == 'thirst')) { var statusValue = Math.floor(100 - data.status[i].value); }
+						if ((data.status[i].name == 'hunger') || (data.status[i].name == 'thirst')) { var statusValue = Math.floor(data.status[i].value); }
 						else { var statusValue = Math.floor(data.status[i].value); }
 						if (document.querySelector('#'+data.status[i].name+' span')) { document.querySelector('#'+data.status[i].name+' span').style.height = statusValue+'%'; }
 						if (statusValue <= 35) {
